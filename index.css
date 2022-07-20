@@ -7,14 +7,18 @@
 
 @font-face {
   font-family: 'diceyregular';
-  src: url('dicey-webfont.woff2') format('woff2'),
-       url('dicey-webfont.woff') format('woff');
+  src: url('assets/dicey-webfont.woff2') format('woff2'),
+       url('assets/dicey-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
 
-
 body {
   background-color: red;
+}
+
+.dice-1 {
+  font-family: diceyregular;
+  font-size: 4rem;
 }
