@@ -22,3 +22,8 @@ body {
   font-family: diceyregular;
   font-size: 4rem;
 }
+
+.master-container {
+  background-color: blue;
+  padding: 1rem;
+}
