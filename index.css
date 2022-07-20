@@ -21,9 +21,35 @@ body {
 .dice-1, .dice-2 {
   font-family: diceyregular;
   font-size: 4rem;
+  background-color: white;
+  border-radius: 25px;
+  color: black;
+  padding: 1rem;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  border-radius: 36px;
+  background: #ded6d6;
+  box-shadow: inset 18px 18px 25px #7f7d7d, inset -18px -18px 25px #ffffff;
+}
+
+.dice-1::after, .dice-2::after {
+  border-radius: 50px;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
+.dice-container {
+    display: flex;
+    flex-direction: row;
+    flex-basis: max-content;
+    gap: 30px;
+    padding: 2rem;
 }
 
 .master-container {
   background-color: blue;
   padding: 1rem;
 }
+
