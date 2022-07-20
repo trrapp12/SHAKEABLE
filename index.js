@@ -1,4 +1,6 @@
 (() => {
+
+  // due to the type of font that is downloaded that will show dice as dot values instead of numbers, to get the right display for a dice we have to refer to it by the letter corresponding to the font.  Therefore it became useful to create an array of objects that associated the number value and letter that it corresponded to.
   const objArray = [
     {
       'letter' : 'k',
@@ -23,7 +25,7 @@
     {
       'letter' : 'p',
       'sidevalue' : 6
-    },
+    }
   ]
 
   const diceOne = document.getElementById('dice-1');

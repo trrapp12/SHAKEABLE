@@ -18,7 +18,7 @@ body {
   background-color: red;
 }
 
-.dice-1 {
+.dice-1, .dice-2 {
   font-family: diceyregular;
   font-size: 4rem;
 }
