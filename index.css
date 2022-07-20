@@ -28,16 +28,20 @@ body {
   width: 5rem;
   height: 5rem;
   text-align: center;
-  border-radius: 36px;
+  border-radius: 29px;
   background: #ded6d6;
-  box-shadow: inset 18px 18px 25px #7f7d7d, inset -18px -18px 25px #ffffff;
+  box-shadow: inset 18px 18px 25px #ffffff, inset -18px -18px 25px #7f7d7d;
+  animation: rolldice 10s ease-out forwards;
+  transform-origin: center center;
 }
 
 .dice-1::after, .dice-2::after {
-  border-radius: 50px;
-background: #e0e0e0;
-box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
+  border-radius: 36px;
+  border-radius: 63px;
+  background: #e0e0e0;
+  box-shadow:  6px 6px 12px #7d7d7d,
+               -6px -6px 12px #ffffff;
+  
 }
 
 .dice-container {
@@ -48,8 +52,51 @@ box-shadow:  20px 20px 60px #bebebe,
     padding: 2rem;
 }
 
+.dice-parent {
+  animation: bounce 10s forwards;
+}
+
 .master-container {
   background-color: blue;
   padding: 1rem;
 }
 
+@keyframes rolldice {
+  0% {
+      transform: rotate(0deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(360deg) translateY(-100px);
+  }
+
+  75% {
+    transform: rotate(540deg) translateY(0);
+  }
+
+  100% {
+    transform: rotate(720deg) translateY(-100px);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+
+  25% {
+    transform: translateY(-10%);
+  }
+
+  50% {
+    transform: translateY(0%);
+  }
+
+  75% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
