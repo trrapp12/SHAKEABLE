@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;700&family=Rubik+Puddles&family=Yomogi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css"></link>
   </head>
   <body>
       <div class="master-container">
         <main>
-          <h1>Shakeable</h1>
+          <h1 class="title">Shakeable</h1>
+          <p class="message" id="message">Shake the phone or Press Play!</p>
           <div class="dice-container">
             <div class="column">
-              <div class="score" id="score-1"></div>
+              <p class="score" > Player 1 score: <span class="score" id="score-1"> - </span></p>
               <div class="dice-parent">
-                <div class="dice-1" id="dice-1"></div>
+                <p class="dice-1" id="dice-1"></p>
               </div>
               <!-- <div class="dice-1" id="dice-3">a b c d e f g h i j k l m n o p q r s t u v w x y z</div> -->
             </div>
             <div class="column">
-              <div class="score" id="score-2"></div>
+              <p class="score" id="score-2">Player 2 score: <span class="score" id="score-1"> - </span></p>
               <div class="dice-parent">
-                <div class="dice-2" id="dice-2"></div>
+                <p class="dice-2" id="dice-2"></p>
               </div>
             </div> 
-            <button></button>          
+                    
           </div>
+          <button id="button">Button</button>  
         </main>
         <footer>
           <div class="options"></div>

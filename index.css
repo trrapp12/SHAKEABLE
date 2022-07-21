@@ -1,4 +1,17 @@
 
+:root {
+  --bright-pink: #F2388F;
+  --light-pink: #D96AA7;
+  --blue: #2173A6; 
+  --dark-blue: #013440;
+  --bright-blue: #52E2F2;
+}
+
+
+html {
+  font-size: 32px;
+}
+
 * {
   margin: 0px; 
   padding: 0px; 
@@ -14,54 +27,96 @@
 
 }
 
-body {
-  background-color: red;
+.active {
+  width: 5.1rem; 
+  height: 5.1rem;
+}
+
+button {
+  font-size: 1rem;
+  padding: .75rem 1.75rem;
+  border-radius: 25px;
+  background: var(--bright-blue);
+  border: 11px solid var(--blue);
+  color: var(--dark-blue);
+  /* max-width: 42vw; */
+  margin: auto;
 }
 
 .dice-1, .dice-2 {
   font-family: diceyregular;
   font-size: 4rem;
-  background-color: white;
+  background-color: ;
   border-radius: 25px;
-  color: black;
+  color: var(--dark-blue);
   padding: 1rem;
   width: 5rem;
   height: 5rem;
   text-align: center;
   border-radius: 29px;
-  background: #ded6d6;
-  box-shadow: inset 18px 18px 25px #ffffff, inset -18px -18px 25px #7f7d7d;
-  animation: rolldice 10s forwards;
+  background: var(--bright-pink);
+  box-shadow: inset 18px 18px 25px #f7a8cd, inset -18px -18px 25px #b62367;
+  animation: rolldice 3s forwards ease-out;
   transform-origin: center center;
-  transform-style: preserve-3D;
+  transform: translate(50%, 50%);
+  /* position: absolute; */
+  top: 0;
+  left: 0;
 }
 
-.dice-1::after, .dice-2::after {
-  border-radius: 36px;
-  border-radius: 63px;
-  background: #e0e0e0;
-  box-shadow:  6px 6px 12px #7d7d7d,
-               -6px -6px 12px #ffffff;
-  
+.column {
+  margin: 0rem auto 4rem auto;
 }
 
 .dice-container {
-    display: flex;
-    flex-direction: row;
-    flex-basis: max-content;
-    gap: 30px;
-    padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  flex-basis: max-content;
+  gap: 30px;
+  padding: 2rem;
+  justify-content: center;
 }
 
 .dice-parent {
-  animation: bounce 15000ms forwards;
+  animation: bounce 400ms forwards ease-out;
   transform-origin: center center;
   transform-style: preserve-3D;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
 .master-container {
-  background-color: blue;
-  padding: 1rem;
+  background-color: var(--dark-blue);
+  padding: 2rem 1rem;
+}
+
+.message {
+  background-color: var(--blue);
+  color: var(--bright-blue);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px 45px 5px 45px;
+  max-width: 30vw;
+  margin: auto;
+}
+
+.score {
+  color: var(--bright-blue)
+}
+
+.title {
+  color: var(--light-pink);
+  font-family: 'Rubik Puddles', cursive;
+  font-size: 4rem;
+  text-align: center;
+  margin: 0rem auto 2rem auto;
 }
 
 @keyframes rolldice {
@@ -69,63 +124,39 @@ body {
       transform: rotate(0deg);
   }
 
-  12.5% {
-    transform: rotate(180deg);
-  }
-
-  25% {
-    transform: rotate(0deg);
-  }
-
-  40% {
-    transform: rotate(180deg);
-  }
-
-  50% {
-    transform: rotate(0deg);
-  }
-
-  65% {
-    transform: rotate(180deg);
-  }
-
-  75% {
-    transform: rotate(0deg);
-  }
-
   100% {
-    transform: rotate(180deg);
+    transform: rotate(1080deg);
   }
 }
 
 @keyframes bounce {
   0% {
-    transform: translateY(-200%) translateX(-200%);
+    transform: translateY(-100%) translateX(-100%);
   }
 
   12.5% {
-    transform: translateY(50%) translateX(80%);
+    transform: translateY(50%) translateX(50%);
   }
 
   25% {
-    transform: translateY(-100%) translateX(-50%);
+    transform: translateY(-100%) translateX(-100%);
   }
 
   40% {
-    transform: translateY(100%) translateX(-100%);
+    transform: translateY(50%) translateX(-75%);
   }
 
   50% {
-    transform: translateY(-75%) translateX(75%);
+    transform: translateY(-70%) translateX(-50%);
   }
 
-  65%% {
-    transform: translateY(50%) translateX(60%);
+  /* 65% {
+    transform: translateY(50%) translateX(-25%);
   }
 
   75% {
-    transform: translateY(-60%%) translateX(55%);
-  }
+    transform: translateY(-60%) translateX(-12.5%);
+  } */
 
   100% {
     transform: translateY(50%) translateX(0%);

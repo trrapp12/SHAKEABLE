@@ -26,23 +26,94 @@
       'letter' : 'p',
       'sidevalue' : 6
     }
-  ]
+  ];
+
+    // grab necessary elements that need to be populated
 
   const diceOne = document.getElementById('dice-1');
-  const diceTwo = document.getElementById('dice-2')
+  const diceTwo = document.getElementById('dice-2');
+  const scoreOneContainer = document.getElementById('score-1');
+  const scoreTwoContainer = document.getElementById('score-2');
+  const messageContainer = document.getElementById('message');
+  const button = document.getElementById('button');
 
+  let player1score = 0;
+  let player2score = 0;
+  let player1;
+  
+  // create functions
   function produceRandomNumber (maxvalue, startvalue) {
-    return Math.floor((Math.random() * maxvalue) + startvalue)
+    return Math.floor((Math.random() * maxvalue) + startvalue);
   }
 
-  function setDisplayNumber (objArray) {
-    let a = produceRandomNumber(6, 1);
-    return objArray[a-1].letter
+  function setDisplayNumber (objArray, num) {
+    // let a = produceRandomNumber(6, 1);
+    return objArray[num-1].letter;
+  }
+
+  function playerRolls (player1, objArray) {
+    console.log(`entering playerRolls: player1 is ${player1} and objArray is ${objArray}`);
+    let randNum = produceRandomNumber(6, 1);
+    if (player1) {
+      player1score += objArray[randNum - 1].sidevalue;
+      diceOne.textContent = setDisplayNumber(objArray, randNum);
+      scoreOneContainer.textContent = player1score;
+      console.log(`playerRolls if statement: player is true. randNum is ${randNum} and player1score is ${player1score}`);
+    } else if (!player1) {
+      player2score += objArray[randNum - 1].sidevalue;
+      diceTwo.textContent = setDisplayNumber(objArray, randNum);
+      scoreTwoContainer.textContent = player2score;
+      console.log(`playerRolls else statement: player is false. randNum is ${randNum} and player1score is ${player1score}`);
+    }
+  }
+  
+  function changePlayer (player1) {
+    console.log(`entering changePlayer(); player1 is ${player1}`);
+    if (player1) {
+      
+      messageContainer.textContent = "Player 1's turn!";
+      diceTwo.classList.remove('active');
+      diceOne.classList.add('active');
+      player1 = false;
+      console.log(`changePlayer: true, player1 is ${player1}`);
+    } else {
+      messageContainer.textContent = "Player 2's turn";
+      diceTwo.classList.remove('active');
+      diceOne.classList.add('active');
+      player1 = true;
+      console.log(`changePlayer: false, player1 is ${player1}`);
+    }
+  }
+
+  function determineWhoRollsFirst () {
+    let a = produceRandomNumber(2, 0);
+    console.log("determineWHoRollsFirst: " + a);
+    if ( a === 0) {
+      player1 = true;
+      console.log("determineWhoRollsFirst: player1 = " + player1);
+    } else {
+      player1 = false;
+      console.log("determineWhoRollsFirst: player1 = " + player1);
+    }
   }
 
   window.addEventListener('load', () => {
-    diceOne.textContent = setDisplayNumber(objArray);
-    diceTwo.textContent = setDisplayNumber(objArray);
-  })
+    let a = produceRandomNumber(6, 1);
+    let b = produceRandomNumber(6, 1);
+    diceOne.textContent = setDisplayNumber(objArray, a);
+    diceTwo.textContent = setDisplayNumber(objArray, b);
+  });
+
+  button.addEventListener('click', () => {
+    if (player1 === undefined) {
+      console.log(`click event: undefined`);
+      determineWhoRollsFirst();
+      button.textContent = "Roll";
+    } else {
+      console.log(`click event: defined`);
+      playerRolls(player1, objArray);
+      changePlayer(player1)
+    }
+  });
 
 })();
