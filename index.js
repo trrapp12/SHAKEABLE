@@ -135,6 +135,10 @@
     }
   }
 
+  // function go () {
+
+  // }
+
   // add event listeners
 
   window.addEventListener("load", () => {
@@ -159,9 +163,28 @@
     }
   });
 
-  window.addEventListener("devicemotion", function (event) {
-    alert(
-      ` You shook the phone!  Acceleration is : ${event.acceleration.x} m/s2`
-    );
+  button.addEventListener("touchstart", () => {
+    console.log(`CLICK EVENT: player 1 is ${player1turn}`);
+    if (player1turn === undefined) {
+      console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
+      determineWhoRollsFirst();
+      button.textContent = "Roll";
+    } else {
+      console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
+      playerRolls(player1turn, objArray);
+      changeMessage(player1turn);
+      player1turn = !player1turn;
+    }
   });
+
+  // button.addEventListener('keypress', (evt) => {
+  //   if (evt.key = 'Enter') {
+
+  //   }
+  // })
+  // window.addEventListener("devicemotion", function (event) {
+  //   alert(
+  //     ` You shook the phone!  Acceleration is : ${event.acceleration.x} m/s2`
+  //   );
+  // });
 })();
