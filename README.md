@@ -9,7 +9,7 @@
 
 <br>
 
-[![View Project](https://user-images.githubusercontent.com/11747875/141705232-471a0b9c-ca45-4540-a1b6-740c5e1becbe.png)](https://trrapp12.github.io/disappearing-directory/)
+[![View Project](https://user-images.githubusercontent.com/11747875/141705232-471a0b9c-ca45-4540-a1b6-740c5e1becbe.png)](https://trrapp12.github.io/dice-game/)
 
 <br>
 
@@ -51,7 +51,7 @@ Demonstrates a search bar that uses key-up event listeners and logic comparisons
 ### Project published at: 
 ---
 
-[Stoic Search Directory](https://trrapp12.github.io/disappearing-directory/)
+[Stoic Search Directory](https://trrapp12.github.io/dice-game/)
 
 ### More Information:
 ---
