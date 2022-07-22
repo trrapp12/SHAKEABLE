@@ -32,9 +32,7 @@
 
 ---
 
-A nod to Ryan Holiday's "The Obstacle is the Way" and all Stoic philosophers.  Also a JavaScript for practice.  
-
-Demonstrates a search bar that uses key-up event listeners and logic comparisons to decide which entries to show or hide based on user input.
+A cute dice game.  First to 20 wins.  Uses Vanilla Javascript to track state, scores of players, and dislay updated information.
 
 <br/>
 <br/>
@@ -42,16 +40,18 @@ Demonstrates a search bar that uses key-up event listeners and logic comparisons
 ### Project v1.0 demonstrates the following:
 ---
 
-- [X] <em>User Story 1: </em> User should be able to input search terms into the input.
-- [X] <em>User Story 2: </em> User should be able to see a list of possible Stoic Philosophers.
-- [X] <em>User Story 3: </em> User should be able to see non-applicable results get filtered out while typing.
-- [X] <em>User Story 4: </em> User should be able to utilize this on desktop and mobile.
+- [X] <em>User Story 1: </em> User should be able to play with another person.
+- [X] <em>User Story 2: </em> User should be able to see whose turn it is.
+- [X] <em>User Story 3: </em> User should be able to see updated score.
+- [X] <em>User Story 4: </em> User should be able to know who won.
+- [X] <em>User Story 4: </em> User should be able to "roll" dice either by shaking phone, pushing button, clicking button, or with keyboard button.
+- [X] <em>User Story 4: </em> User should be able to enjoy some fun animations.
 
 
 ### Project published at: 
 ---
 
-[Stoic Search Directory](https://trrapp12.github.io/dice-game/)
+[Dice Game](https://trrapp12.github.io/dice-game/)
 
 ### More Information:
 ---
