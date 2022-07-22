@@ -204,8 +204,21 @@
   });
 
   window.addEventListener("devicemotion", function (event) {
-    alert(
-      ` You shook the phone! X is : ${event.acceleration.x} m/s2. Y is ${event.acceleration.y} Z is ${event.acceleration.y}`
-    );
+    if (
+      event.acceleration.x > 0.1 ||
+      event.acceleration.y > 0.1 ||
+      event.acceleration.z > 0.1
+    ) {
+      if (player1turn === undefined) {
+        console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
+        determineWhoRollsFirst();
+        button.textContent = "Roll";
+      } else {
+        console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
+        playerRolls(player1turn, objArray);
+        changeMessage(player1turn);
+        player1turn = !player1turn;
+      }
+    }
   });
 })();
