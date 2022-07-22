@@ -204,7 +204,7 @@
   });
 
   window.addEventListener("devicemotion", function (event) {
-    console.log(
+    alert(
       ` You shook the phone! X is : ${event.acceleration.x} m/s2. Y is ${event.acceleration.y} Z is ${event.acceleration.y}`
     );
   });
