@@ -123,23 +123,23 @@
   function checkForWinner(player1score, player2score) {
     if (player1score >= 20 && player2score < 20) {
       button.textContent = "Roll Again!";
-      setTimeout(resetGame(), 5000);
+      setTimeout(() => {
+        resetGame();
+      }, 5000);
     } else if (player2score >= 20 && player1score < 20) {
       messageContainer.textContent = "Player 2 wins";
-      setTimeout(resetGame(), 5000);
+      setTimeout(() => {
+        resetGame();
+      }, 5000);
     } else if (player1score === 20 && player2score === 20) {
       messageContainer.textContent = "Player 1 wins";
-      setTimeout(resetGame(), 5000);
+      setTimeout(() => {
+        resetGame();
+      }, 5000);
     } else {
       console.log(`the game must go on`);
     }
   }
-
-  // function go () {
-
-  // }
-
-  // add event listeners
 
   window.addEventListener("load", () => {
     let a = produceRandomNumber(6, 1);
@@ -203,9 +203,9 @@
     }
   });
 
-  // window.addEventListener("devicemotion", function (event) {
-  //   alert(
-  //     ` You shook the phone!  Acceleration is : ${event.acceleration.x} m/s2`
-  //   );
-  // });
+  window.addEventListener("devicemotion", function (event) {
+    console.log(
+      ` You shook the phone! X is : ${event.acceleration.x} m/s2. Y is ${event.acceleration.y} Z is ${event.acceleration.y}`
+    );
+  });
 })();
