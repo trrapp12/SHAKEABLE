@@ -204,7 +204,7 @@
   });
 
   window.addEventListener("devicemotion", function (event) {
-    this.setInterval(() => {
+    setInterval(() => {
       if (
         event.acceleration.x > 20 ||
         event.acceleration.y > 20 ||
