@@ -122,20 +122,20 @@
 
   function checkForWinner(player1score, player2score) {
     if (player1score >= 20 && player2score < 20) {
-      button.textContent = "Roll Again!";
+      button.textContent = "Player 1 wins";
       setTimeout(() => {
         resetGame();
-      }, 5000);
+      }, 500);
     } else if (player2score >= 20 && player1score < 20) {
       messageContainer.textContent = "Player 2 wins";
       setTimeout(() => {
         resetGame();
-      }, 5000);
+      }, 500);
     } else if (player1score === 20 && player2score === 20) {
-      messageContainer.textContent = "Player 1 wins";
+      messageContainer.textContent = "It's a tie!";
       setTimeout(() => {
         resetGame();
-      }, 5000);
+      }, 500);
     } else {
       console.log(`the game must go on`);
     }
