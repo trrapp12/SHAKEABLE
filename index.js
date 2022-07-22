@@ -104,13 +104,14 @@
     diceTwo.textContent = setDisplayNumber(objArray, b);
   });
 
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (player1) => {
+    console.log(`CLICK EVENT: player 1 is ${player1}`)
     if (player1 === undefined) {
-      console.log(`click event: undefined`);
+      console.log(`CLICK EVENT, IF STATEMENT: ${player1}`);
       determineWhoRollsFirst();
       button.textContent = "Roll";
     } else {
-      console.log(`click event: defined`);
+      console.log(`CLICK EVENT, ELSE STATEMENT: ${player1}`);
       playerRolls(player1, objArray);
       changePlayer(player1)
     }

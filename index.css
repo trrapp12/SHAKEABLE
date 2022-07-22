@@ -1,80 +1,81 @@
-
+/* ============================================  VARIABLES ============================================ */
 :root {
-  --bright-pink: #F2388F;
-  --light-pink: #D96AA7;
-  --blue: #2173A6; 
+  --bright-pink: #f2388f;
+  --light-pink: #d96aa7;
+  --blue: #2173a6;
   --dark-blue: #013440;
-  --bright-blue: #52E2F2;
+  --bright-blue: #52e2f2;
 }
 
+/* ============================================  FONT FACES ============================================ */
+
+@font-face {
+  font-family: "diceyregular";
+  src: url("assets/dicey-webfont.woff2") format("woff2"),
+    url("assets/dicey-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ============================================  NORMALIZE AND SET BASE FONT SIZE ============================================ */
 
 html {
   font-size: 32px;
 }
 
 * {
-  margin: 0px; 
-  padding: 0px; 
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-boxs;
 }
 
-@font-face {
-  font-family: 'diceyregular';
-  src: url('assets/dicey-webfont.woff2') format('woff2'),
-       url('assets/dicey-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
+/* ============================================  CLASSES ============================================ */
 
 .active {
-  width: 5.1rem; 
   height: 5.1rem;
+  width: 5.1rem;
 }
 
 button {
-  font-size: 1rem;
-  padding: .75rem 1.75rem;
-  border-radius: 25px;
   background: var(--bright-blue);
   border: 11px solid var(--blue);
-  color: var(--dark-blue);
-  /* max-width: 42vw; */
-  margin: auto;
-}
-
-.dice-1, .dice-2 {
-  font-family: diceyregular;
-  font-size: 4rem;
-  background-color: ;
   border-radius: 25px;
   color: var(--dark-blue);
-  padding: 1rem;
-  width: 5rem;
-  height: 5rem;
-  text-align: center;
-  border-radius: 29px;
-  background: var(--bright-pink);
-  box-shadow: inset 18px 18px 25px #f7a8cd, inset -18px -18px 25px #b62367;
-  animation: rolldice 3s forwards ease-out;
-  transform-origin: center center;
-  transform: translate(50%, 50%);
-  /* position: absolute; */
-  top: 0;
-  left: 0;
+  font-size: 1rem;
+  margin: auto;
+  padding: 0.75rem 1.75rem;
 }
 
 .column {
-  margin: 0rem auto 4rem auto;
+  margin: 0rem 0rem 2rem 0rem;
+  max-width: max-content;
+}
+
+.dice-1,
+.dice-2 {
+  animation: rolldice 3s forwards ease-out;
+  background-color: var(--bright-pink);
+  border-radius: 25px;
+  border-radius: 29px;
+  box-shadow: inset 18px 18px 25px #f7a8cd, inset -18px -18px 25px #b62367;
+  color: var(--dark-blue);
+  font-family: diceyregular;
+  font-size: 4rem;
+  height: 5rem;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  transform-origin: center center;
+  transform: translate(50%, 50%);
+  top: 0;
+  width: 5rem;
 }
 
 .dice-container {
+  align-content: space-around;
   display: flex;
   flex-direction: row;
-  align-content: center;
-  flex-basis: max-content;
-  gap: 30px;
-  padding: 2rem;
+  gap: 2rem;
   justify-content: center;
 }
 
@@ -84,44 +85,51 @@ button {
   transform-style: preserve-3D;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
-
 .master-container {
   background-color: var(--dark-blue);
   padding: 2rem 1rem;
 }
 
+main {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .message {
   background-color: var(--blue);
+  border-radius: 5px 45px 5px 45px;
   color: var(--bright-blue);
+  max-width: 30vw;
+  margin: auto;
   padding: 1rem 1.5rem;
   text-align: center;
   text-transform: uppercase;
-  border-radius: 5px 45px 5px 45px;
-  max-width: 30vw;
-  margin: auto;
 }
 
 .score {
-  color: var(--bright-blue)
+  color: var(--bright-blue);
+  margin: 0rem 0rem 2rem 0rem;
 }
 
 .title {
   color: var(--light-pink);
-  font-family: 'Rubik Puddles', cursive;
+  font-family: "Rubik Puddles", cursive;
   font-size: 4rem;
-  text-align: center;
   margin: 0rem auto 2rem auto;
+  text-align: center;
 }
+
+.title-container {
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+/* ============================================  ANIMATIONS ============================================ */
 
 @keyframes rolldice {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 
   100% {
@@ -135,31 +143,38 @@ main {
   }
 
   12.5% {
-    transform: translateY(50%) translateX(50%);
+    transform: translateY(-50%) translateX(-50%);
   }
 
   25% {
-    transform: translateY(-100%) translateX(-100%);
+    transform: translateY(-25%) translateX(-25%);
   }
 
   40% {
-    transform: translateY(50%) translateX(-75%);
+    transform: translateY(0%) translateX(0%);
   }
 
   50% {
-    transform: translateY(-70%) translateX(-50%);
+    transform: translateY(25%) translateX(-25%);
   }
 
-  /* 65% {
-    transform: translateY(50%) translateX(-25%);
+  60% {
+    transform: translateY(50%) translateX(-50%);
   }
 
-  75% {
-    transform: translateY(-60%) translateX(-12.5%);
-  } */
+  70% {
+    transform: translateY(25%) translateX(-25%);
+  }
+
+  80% {
+    transform: translateY(15%) translateX(-15%);
+  }
+
+  80% {
+    transform: translateY(5%) translateX(-5%);
+  }
 
   100% {
-    transform: translateY(50%) translateX(0%);
+    transform: translateY(0%) translateX(0%);
   }
-
 }
