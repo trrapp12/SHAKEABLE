@@ -36,9 +36,9 @@
   const messageContainer = document.getElementById("message");
   const button = document.getElementById("button");
 
-  let player1score = 0;
-  let player2score = 0;
-  let player1turn;
+  var player1score = 0;
+  var player2score = 0;
+  var player1turn;
 
   // create functions
   function produceRandomNumber(maxvalue, startvalue) {
@@ -46,7 +46,6 @@
   }
 
   function setDisplayNumber(objArray, num) {
-    // let a = produceRandomNumber(6, 1);
     return objArray[num - 1].letter;
   }
 
@@ -59,11 +58,8 @@
   }
 
   function updatePlayerMessage(player1turn, player1score, player2score) {
-    if (player1turn) {
-      scoreOneContainer.textContent = `${player1score}`;
-    } else {
-      scoreTwoContainer.textContent = `${player2score}`;
-    }
+    scoreOneContainer.textContent = `${player1score}`;
+    scoreTwoContainer.textContent = `${player2score}`;
   }
 
   function updateDice(objArray, randNum, func) {
@@ -74,6 +70,14 @@
     }
   }
 
+  function changeMessage(player1turn) {
+    if (player1turn) {
+      messageContainer.textContent = "Player 2's turn!";
+    } else {
+      messageContainer.textContent = "Player 1's turn";
+    }
+  }
+
   function playerRolls(player1turn, objArray) {
     let randNum = produceRandomNumber(6, 1);
 
@@ -81,23 +85,12 @@
       updateScore(player1turn, randNum);
       updateDice(objArray, randNum, setDisplayNumber);
       updatePlayerMessage(player1turn, player1score, player2score);
-    } else if (!player1turn) {
-      updateScore(player1score, randNum);
+    } else {
+      updateScore(player1turn, randNum);
       updateDice(objArray, randNum, setDisplayNumber);
       updatePlayerMessage(player1turn, player1score, player2score);
     }
-  }
-
-  function changeMessage(player1turn) {
-    if (player1turn) {
-      messageContainer.textContent = "Player 1's turn!";
-    } else {
-      messageContainer.textContent = "Player 2's turn";
-    }
-  }
-
-  function changePlayer(player1turn) {
-    player1turn = !player1turn;
+    checkForWinner(player1score, player2score);
   }
 
   function determineWhoRollsFirst() {
@@ -108,11 +101,37 @@
       console.log(
         `DETERMINE WHO ROLLS FIRST (), if statement: player1 is ${player1turn}`
       );
+      messageContainer.textContent = "Player 1 goes first";
     } else {
       player1turn = false;
       console.log(
         `DETERMINE WHO ROLLS FIRST (), else statement: player1 is ${player1turn}`
       );
+      messageContainer.textContent = "Player 2 goes first";
+    }
+  }
+
+  function resetGame() {
+    player1score = 0;
+    player2score = 0;
+    player1turn = undefined;
+    messageContainer.textContent = "Click or shake to see who plays first";
+    scoreTwoContainer.textContent = " - ";
+    scoreOneContainer.textContent = " - ";
+  }
+
+  function checkForWinner(player1score, player2score) {
+    if (player1score >= 20 && player2score < 20) {
+      button.textContent = "Roll Again!";
+      setTimeout(resetGame(), 5000);
+    } else if (player2score >= 20 && player1score < 20) {
+      messageContainer.textContent = "Player 2 wins";
+      setTimeout(resetGame(), 5000);
+    } else if (player1score === 20 && player2score === 20) {
+      messageContainer.textContent = "Player 1 wins";
+      setTimeout(resetGame(), 5000);
+    } else {
+      console.log(`the game must go on`);
     }
   }
 
@@ -123,6 +142,7 @@
     let b = produceRandomNumber(6, 1);
     diceOne.textContent = setDisplayNumber(objArray, a);
     diceTwo.textContent = setDisplayNumber(objArray, b);
+    button.textContent = "Click or shake to see who plays first";
   });
 
   button.addEventListener("click", () => {
@@ -134,8 +154,12 @@
     } else {
       console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
       playerRolls(player1turn, objArray);
-      changePlayer(player1turn);
       changeMessage(player1turn);
+      player1turn = !player1turn;
     }
+  });
+
+  window.addEventListener("devicemotion", function (event) {
+    console.log(`${event.acceleration.x} m/s2`);
   });
 })();
