@@ -160,6 +160,8 @@
   });
 
   window.addEventListener("devicemotion", function (event) {
-    console.log(`${event.acceleration.x} m/s2`);
+    alert(
+      ` You shook the phone!  Acceleration is : ${event.acceleration.x} m/s2`
+    );
   });
 })();
