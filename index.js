@@ -177,31 +177,35 @@
     }
   });
 
-    button.addEventListener('keydown', (evt) => {
-      if (evt.key === 'Enter' || evt.key === '') {
-        if (player1turn === undefined) {
-          console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
-          determineWhoRollsFirst();
-          button.textContent = "Roll";
-        } else {
-          console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
-          playerRolls(player1turn, objArray);
-          changeMessage(player1turn);
-          player1turn = !player1turn;
-        }
-      } else if (evt.key = 'Tab' || evt.key = 'ArrowLeft' || evt.key = 'ArrowUp' || evt.key = 'ArrowRight' || evt.key = 'ArrowDown' || evt.key = '') {
-        console.log('nothing to see here')
+  button.addEventListener("keydown", (evt) => {
+    if (evt.key === "Enter" || evt.key === "") {
+      if (player1turn === undefined) {
+        console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
+        determineWhoRollsFirst();
+        button.textContent = "Roll";
       } else {
-        alert('Please use the Enter key make selections')
+        console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
+        playerRolls(player1turn, objArray);
+        changeMessage(player1turn);
+        player1turn = !player1turn;
       }
-    })
+    } else if (
+      evt.key === "Tab" ||
+      evt.key === "ArrowLeft" ||
+      evt.key === "ArrowUp" ||
+      evt.key === "ArrowRight" ||
+      evt.key === "ArrowDown" ||
+      evt.key === ""
+    ) {
+      console.log("nothing to see here");
+    } else {
+      alert("Please use the Enter key make selections");
+    }
+  });
 
-
-    // window.addEventListener("devicemotion", function (event) {
-    //   alert(
-    //     ` You shook the phone!  Acceleration is : ${event.acceleration.x} m/s2`
-    //   );
-    // });
-
-
+  // window.addEventListener("devicemotion", function (event) {
+  //   alert(
+  //     ` You shook the phone!  Acceleration is : ${event.acceleration.x} m/s2`
+  //   );
+  // });
 })();
