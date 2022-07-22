@@ -206,9 +206,9 @@
   window.addEventListener("devicemotion", function (event) {
     this.setInterval(() => {
       if (
-        event.acceleration.x > 0.1 ||
-        event.acceleration.y > 0.1 ||
-        event.acceleration.z > 0.1
+        event.acceleration.x > 20 ||
+        event.acceleration.y > 20 ||
+        event.acceleration.z > 20
       ) {
         if (player1turn === undefined) {
           console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
