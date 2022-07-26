@@ -126,6 +126,13 @@ main {
   margin: 0rem 0rem 2rem 0rem;
 }
 
+.wobble {
+  animation: wobble 1000ms linear;
+  animation-iteration-count: 12;
+  background-color: var(--light-pink);
+  color: var(--dark-blue);
+}
+
 /* ============================================  ANIMATIONS ============================================ */
 
 @keyframes rolldice {
@@ -177,5 +184,27 @@ main {
 
   100% {
     transform: translateY(0%) translateX(0%);
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }

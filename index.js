@@ -118,27 +118,31 @@
 
     scoreTwoContainer.textContent = " - ";
     scoreOneContainer.textContent = " - ";
+    messageContainer.classList.remove("wobble");
     setInterval(() => {
       messageContainer.textContent = "Click or shake to see who plays first";
-    }, 3000);
+    }, 50);
   }
 
   function checkForWinner(player1score, player2score) {
     if (player1score >= 20 && player2score < 20) {
       messageContainer.textContent = "Player 1 wins";
+      messageContainer.classList.add("wobble");
       setTimeout(() => {
         resetGame();
-      }, 500);
+      }, 3000);
     } else if (player2score >= 20 && player1score < 20) {
       messageContainer.textContent = "Player 2 wins";
+      messageContainer.classList.add("wobble");
       setTimeout(() => {
         resetGame();
-      }, 500);
+      }, 3000);
     } else if (player1score === 20 && player2score === 20) {
       messageContainer.textContent = "It's a tie!";
+      messageContainer.classList.add("wobble");
       setTimeout(() => {
         resetGame();
-      }, 500);
+      }, 3000);
     } else {
       changeMessage(player1turn);
     }
