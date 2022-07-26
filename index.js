@@ -115,14 +115,17 @@
     player1score = 0;
     player2score = 0;
     player1turn = undefined;
-    messageContainer.textContent = "Click or shake to see who plays first";
+
     scoreTwoContainer.textContent = " - ";
     scoreOneContainer.textContent = " - ";
+    setInterval(() => {
+      messageContainer.textContent = "Click or shake to see who plays first";
+    }, 3000);
   }
 
   function checkForWinner(player1score, player2score) {
     if (player1score >= 20 && player2score < 20) {
-      button.textContent = "Player 1 wins";
+      messageContainer.textContent = "Player 1 wins";
       setTimeout(() => {
         resetGame();
       }, 500);
@@ -137,7 +140,7 @@
         resetGame();
       }, 500);
     } else {
-      console.log(`the game must go on`);
+      changeMessage(player1turn);
     }
   }
 
@@ -158,7 +161,7 @@
     } else {
       console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
       playerRolls(player1turn, objArray);
-      changeMessage(player1turn);
+      checkForWinner(player1score, player2score);
       player1turn = !player1turn;
     }
   });
@@ -172,7 +175,7 @@
     } else {
       console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
       playerRolls(player1turn, objArray);
-      changeMessage(player1turn);
+      checkForWinner(player1score, player2score);
       player1turn = !player1turn;
     }
   });
@@ -186,7 +189,7 @@
       } else {
         console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
         playerRolls(player1turn, objArray);
-        changeMessage(player1turn);
+        checkForWinner(player1score, player2score);
         player1turn = !player1turn;
       }
     } else if (
@@ -217,7 +220,7 @@
         } else {
           console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
           playerRolls(player1turn, objArray);
-          changeMessage(player1turn);
+          checkForWinner(player1score, player2score);
           player1turn = !player1turn;
         }
       }
