@@ -185,7 +185,7 @@
   });
 
   button.addEventListener("keydown", (evt) => {
-    if (evt.key === "Enter" || evt.key === "") {
+    if (evt.key === "Enter") {
       if (player1turn === undefined) {
         console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
         determineWhoRollsFirst();
@@ -199,10 +199,14 @@
     } else if (
       evt.key === "Tab" ||
       evt.key === "ArrowLeft" ||
+      evt.key === "Left" ||
       evt.key === "ArrowUp" ||
+      evt.key === "Up" ||
       evt.key === "ArrowRight" ||
+      evt.key === "Right" ||
       evt.key === "ArrowDown" ||
-      evt.key === ""
+      evt.key === "Down" ||
+      evt.key === " "
     ) {
       console.log("nothing to see here");
     } else {
