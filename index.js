@@ -36,9 +36,9 @@
   const messageContainer = document.getElementById("message");
   const button = document.getElementById("button");
 
-  var player1score = 0;
-  var player2score = 0;
-  var player1turn;
+  let player1score = 0;
+  let player2score = 0;
+  let player1turn;
 
   // create functions
   function produceRandomNumber(maxvalue, startvalue) {
