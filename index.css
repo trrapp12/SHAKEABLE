@@ -47,7 +47,7 @@ button {
 }
 
 .column {
-  margin: 0rem 0rem 2rem 0rem;
+  margin: 0rem 0rem 1.5rem 0rem;
   max-width: max-content;
 }
 
@@ -106,12 +106,13 @@ main {
   margin: auto;
   padding: 1rem 1.5rem;
   text-align: center;
+  border: 10px solid var(--bright-blue);
   text-transform: uppercase;
 }
 
 .score {
   color: var(--bright-blue);
-  margin: 0rem 0rem 2rem 0rem;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 
 .title {
@@ -123,7 +124,7 @@ main {
 }
 
 .title-container {
-  margin: 0rem 0rem 2rem 0rem;
+  margin: 0rem 0rem 1.5rem 0rem;
 }
 
 .wobble {
@@ -131,6 +132,7 @@ main {
   animation-iteration-count: 12;
   background-color: var(--light-pink);
   color: var(--dark-blue);
+  border: 10px solid white;
 }
 
 /* ============================================  ANIMATIONS ============================================ */
