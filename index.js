@@ -58,8 +58,8 @@
   }
 
   function updatePlayerMessage(player1turn, player1score, player2score) {
-    scoreOneContainer.textContent = `${player1score}`;
-    scoreTwoContainer.textContent = `${player2score}`;
+    scoreOneContainer.textContent = player1score;
+    scoreTwoContainer.textContent = player2score;
   }
 
   function updateDice(objArray, randNum, func) {
