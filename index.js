@@ -182,9 +182,10 @@
       checkForWinner(player1score, player2score);
       player1turn = !player1turn;
     }
+    event.preventDefault();
   });
 
-  button.addEventListener("keydown", (evt) => {
+  button.addEventListener("keyup", (evt) => {
     if (evt.key === "Enter") {
       if (player1turn === undefined) {
         console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
