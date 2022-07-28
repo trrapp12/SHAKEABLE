@@ -234,6 +234,6 @@
     //     }
     //   }
     // }, 25);
-    console.log(`Window.DeviceMotionEventRotationRate.gamma is ${Window.DeviceMotionEventRotationRate.gamma}` and acceleration x is ${Window.DeviceMotionEventAcceleration.x} ${Window.DeviceMotionEventAcceleration.y} ${Window.DeviceMotionEventAcceleration.z} )
+    alert(`Window.DeviceMotionEventRotationRate.gamma is ${Window.DeviceMotionEventRotationRate.gamma}` and acceleration x is ${Window.DeviceMotionEventAcceleration.x} ${Window.DeviceMotionEventAcceleration.y} ${Window.DeviceMotionEventAcceleration.z} )
   });
 })();
