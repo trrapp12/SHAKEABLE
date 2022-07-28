@@ -215,7 +215,7 @@
     }
   });
 
-  window.addEventListener("devicemotion", function (event) {
+  window.addEventListener("devicemotion", (evt) => {
     // setInterval(() => {
     //   if (
     //     event.acceleration.x > 20 ||
@@ -234,6 +234,8 @@
     //     }
     //   }
     // }, 25);
-    alert(`Window.DeviceMotionEventRotationRate.gamma is ${Window.DeviceMotionEventRotationRate.gamma}` and acceleration x is ${Window.DeviceMotionEventAcceleration.x} ${Window.DeviceMotionEventAcceleration.y} ${Window.DeviceMotionEventAcceleration.z} )
+    alert(
+      `acceleration is ${evt.acceleration} and alpha ${evt.rotationRate.alpha}`
+    );
   });
 })();
