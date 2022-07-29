@@ -216,20 +216,18 @@
   });
 
   window.addEventListener(ondevicemotion, (evt) => {
-    if (
-      evt.accelerationIncludingGravity.x > 10 ||
-      evt.accelerationIncludingGravity.y > 10 ||
-      evt.accelerationIncludingGravity.z > 10
-    ) {
-      if (player1turn === undefined) {
-        console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
-        determineWhoRollsFirst();
-        button.textContent = "Roll";
-      } else {
-        console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
-        playerRolls(player1turn, objArray);
-        checkForWinner(player1score, player2score);
-        player1turn = !player1turn;
+    if (DeviceMotionEventRotationRate) {
+      if (evt.rotationRate.gamma > 10) {
+        if (player1turn === undefined) {
+          console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
+          determineWhoRollsFirst();
+          button.textContent = "Roll";
+        } else {
+          console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
+          playerRolls(player1turn, objArray);
+          checkForWinner(player1score, player2score);
+          player1turn = !player1turn;
+        }
       }
     }
   });
