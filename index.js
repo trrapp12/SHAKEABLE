@@ -219,7 +219,11 @@
     alert("window ondevice motion");
     if (DeviceMotionEventRotationRate) {
       alert("determined motion is a rotation event");
-      if (evt.rotationRate.gamma > 10) {
+      if (
+        evt.rotationRate.alpha > 10 ||
+        evt.rotationRate.beta > 10 ||
+        evt.rotationRate.gamma > 10
+      ) {
         alert("rotation exceeded 10");
         if (player1turn === undefined) {
           console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
