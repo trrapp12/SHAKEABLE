@@ -222,7 +222,13 @@
       evt.rotationRate.beta > 100 ||
       evt.rotationRate.gamma > 100
     ) {
-      alert("rotation exceeded 10");
+      alert(
+        evt.rotationRate.alpha +
+          " " +
+          evt.rotationRate.beta +
+          " " +
+          evt.rotationRate.gamma
+      );
       if (player1turn === undefined) {
         console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
         determineWhoRollsFirst();
