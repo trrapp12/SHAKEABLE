@@ -178,7 +178,7 @@
     }
   };
 
-  const shakeThrottled = throttled(500, shakeHandler);
+  const shakeThrottled = throttled(200, shakeHandler);
 
   // add event listeners
 
