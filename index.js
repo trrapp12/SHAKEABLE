@@ -217,7 +217,7 @@
   });
 
   window.addEventListener("devicemotion", (evt) => {
-    if (evt.rotationRate.alpha > 0.5) {
+    if (evt.rotationRate.alpha > 300) {
       if (player1turn === undefined) {
         console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
         determineWhoRollsFirst();
