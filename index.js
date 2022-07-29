@@ -217,13 +217,13 @@
   });
 
   window.addEventListener("devicemotion", (evt) => {
-    optionsOne.textContent = `${evt.rotationRate.alpha} + ${evt.rotationRate.beta} +
-        ${evt.rotationRate.gamma}`;
     if (
-      evt.rotationRate.alpha > 100 ||
-      evt.rotationRate.beta > 100 ||
-      evt.rotationRate.gamma > 100
+      evt.rotationRate.alpha > 60 ||
+      evt.rotationRate.beta > 60 ||
+      evt.rotationRate.gamma > 60
     ) {
+      optionsOne.textContent = `${evt.rotationRate.alpha} + ${evt.rotationRate.beta} +
+      ${evt.rotationRate.gamma}`;
       if (player1turn === undefined) {
         console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
         determineWhoRollsFirst();
