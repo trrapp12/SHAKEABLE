@@ -35,6 +35,7 @@
   const scoreTwoContainer = document.getElementById("score-2");
   const messageContainer = document.getElementById("message");
   const button = document.getElementById("button");
+  const optionsOne = document.getElementById("options-1");
 
   let player1score = 0;
   let player2score = 0;
@@ -216,13 +217,8 @@
   });
 
   window.addEventListener("devicemotion", (evt) => {
-    alert(
-      evt.rotationRate.alpha +
-        " " +
-        evt.rotationRate.beta +
-        " " +
-        evt.rotationRate.gamma
-    );
+    optionsOne.textContent = `${evt.rotationRate.alpha} + ${evt.rotationRate.beta} +
+        ${evt.rotationRate.gamma}`;
     if (
       evt.rotationRate.alpha > 100 ||
       evt.rotationRate.beta > 100 ||
