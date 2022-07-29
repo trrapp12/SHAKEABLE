@@ -216,7 +216,11 @@
   });
 
   window.addEventListener(ondevicemotion, (evt) => {
-    if (evt.accelerationIncludingGravity.x > 10 || evt.accelerationIncludingGravity.y > 10 || evt.accelerationIncludingGravity.z > 10) {
+    if (
+      evt.accelerationIncludingGravity.x > 10 ||
+      evt.accelerationIncludingGravity.y > 10 ||
+      evt.accelerationIncludingGravity.z > 10
+    ) {
       if (player1turn === undefined) {
         console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
         determineWhoRollsFirst();
@@ -229,9 +233,4 @@
       }
     }
   });
-          
-
-
-
-  );
 })();
