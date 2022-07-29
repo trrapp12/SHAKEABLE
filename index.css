@@ -53,7 +53,6 @@ button {
 
 .dice-1,
 .dice-2 {
-  animation: rolldice 3s forwards ease-out;
   background-color: var(--bright-pink);
   border-radius: 25px;
   border-radius: 29px;
@@ -65,10 +64,12 @@ button {
   left: 0;
   padding: 1rem;
   text-align: center;
-  transform-origin: center center;
-  transform: translate(50%, 50%);
   top: 0;
   width: 5rem;
+}
+
+.dice-animation {
+  animation: rolldice 3s forwards ease-out;
 }
 
 .dice-container {

@@ -36,6 +36,8 @@
   const messageContainer = document.getElementById("message");
   const button = document.getElementById("button");
   const optionsOne = document.getElementById("options-1");
+  const diceClassList1 = document.getElementById("dice-1").classList;
+  const diceClassList2 = document.getElementById("dice-2").classList;
 
   let player1score = 0;
   let player2score = 0;
@@ -83,6 +85,19 @@
     messageContainer.classList.remove("wobble");
   }
 
+  function toggleDice1Animation() {
+    diceClassList1.toggle("dice-animation");
+  }
+
+  function toggleDice2Animation() {
+    diceClassList2.toggle("dice-animation");
+  }
+
+  function removeDiceAnimation() {
+    diceClassList1.remove("dice-animation");
+    diceClassList2.remove("dice-animation");
+  }
+
   function changeMessage(player1turn) {
     console.log("CHANGE MESSAGE");
     if (player1turn) {
@@ -98,10 +113,14 @@
     if (player1turn) {
       updateScore(player1turn, randNum);
       updateDice(objArray, randNum, setDisplayNumber);
+      toggleDice1Animation();
+      setTimeout(removeDiceAnimation, 1000);
       updatePlayerMessage(player1turn, player1score, player2score);
     } else {
       updateScore(player1turn, randNum);
       updateDice(objArray, randNum, setDisplayNumber);
+      toggleDice2Animation();
+      setTimeout(removeDiceAnimation, 1000);
       updatePlayerMessage(player1turn, player1score, player2score);
     }
   }
@@ -156,7 +175,7 @@
     }
   }
 
-  // creates a handler function and associated throttled function that will only run once every 200ms and a handler to go with it
+  // creates a handler functions and associated throttled function that will only run once every 200ms and a handler to go with it
 
   function throttled(delay, fn) {
     let lastCall = 0;
@@ -190,6 +209,9 @@
   const loadHandler = () => {
     let a = produceRandomNumber(6, 1);
     let b = produceRandomNumber(6, 1);
+    toggleDice1Animation();
+    toggleDice2Animation();
+    setTimeout(removeDiceAnimation, 3000);
     diceOne.textContent = setDisplayNumber(objArray, a);
     diceTwo.textContent = setDisplayNumber(objArray, b);
     displayButtonMessage("Click or shake to see who plays first");
