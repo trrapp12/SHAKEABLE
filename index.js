@@ -72,6 +72,7 @@
   }
 
   function changeMessage(player1turn) {
+    console.log("CHANGE MESSAGE");
     if (player1turn) {
       messageContainer.textContent = "Player 2's turn!";
     } else {
@@ -91,7 +92,6 @@
       updateDice(objArray, randNum, setDisplayNumber);
       updatePlayerMessage(player1turn, player1score, player2score);
     }
-    checkForWinner(player1score, player2score);
   }
 
   function determineWhoRollsFirst() {
@@ -120,36 +120,31 @@
     scoreTwoContainer.textContent = " - ";
     scoreOneContainer.textContent = " - ";
     messageContainer.classList.remove("wobble");
-    setInterval(() => {
+    setTimeout(() => {
       messageContainer.textContent = "Click or shake to see who plays first";
     }, 50);
   }
 
   function checkForWinner(player1score, player2score) {
+    console.log("CHECK FOR WINNER");
     if (player1score >= 20 && player2score < 20) {
       messageContainer.textContent = "Player 1 wins";
       messageContainer.classList.add("wobble");
-      setTimeout(() => {
-        resetGame();
-      }, 3000);
+      setTimeout(resetGame, 3000);
     } else if (player2score >= 20 && player1score < 20) {
       messageContainer.textContent = "Player 2 wins";
       messageContainer.classList.add("wobble");
-      setTimeout(() => {
-        resetGame();
-      }, 3000);
+      setTimeout(resetGame, 3000);
     } else if (player1score === 20 && player2score === 20) {
       messageContainer.textContent = "It's a tie!";
       messageContainer.classList.add("wobble");
-      setTimeout(() => {
-        resetGame();
-      }, 3000);
+      setTimeout(resetGame, 3000);
     } else {
       changeMessage(player1turn);
     }
   }
 
-  // creates a throttled function that will only run once every 500ms and a handler to go with it
+  // creates a handler function and a throttled function that will only run once every 200ms and a handler to go with it
 
   function throttled(delay, fn) {
     let lastCall = 0;
@@ -202,21 +197,22 @@
       checkForWinner(player1score, player2score);
       player1turn = !player1turn;
     }
+    evt.preventDefault();
   });
 
-  button.addEventListener("touchstart", (evt) => {
-    console.log(`CLICK EVENT: player 1 is ${player1turn}`);
+  button.addEventListener("touchend", (evt) => {
+    evt.preventDefault();
+    console.log(`TOUCH EVENT: player 1 is ${player1turn}`);
     if (player1turn === undefined) {
-      console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
+      console.log(`TOUCH EVENT, IF STATEMENT: ${player1turn}`);
       determineWhoRollsFirst();
       button.textContent = "Roll";
     } else {
-      console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
+      console.log(`TOUCH EVENT, ELSE STATEMENT: ${player1turn}`);
       playerRolls(player1turn, objArray);
       checkForWinner(player1score, player2score);
       player1turn = !player1turn;
     }
-    evt.preventDefault();
   });
 
   button.addEventListener("keyup", (evt) => {
