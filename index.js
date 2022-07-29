@@ -149,6 +149,39 @@
     }
   }
 
+  // creates a throttled function that will only run once every 500ms and a handler to go with it
+
+  function throttled(delay, fn) {
+    let lastCall = 0;
+    return function (...args) {
+      const now = new Date().getTime();
+      if (now - lastCall < delay) {
+        return;
+      }
+      lastCall = now;
+      return fn(...args);
+    };
+  }
+
+  const shakeHandler = function (evt) {
+    if (evt.rotationRate.beta > 100) {
+      if (player1turn === undefined) {
+        console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
+        determineWhoRollsFirst();
+        button.textContent = "Roll";
+      } else {
+        console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
+        playerRolls(player1turn, objArray);
+        checkForWinner(player1score, player2score);
+        player1turn = !player1turn;
+      }
+    }
+  };
+
+  const shakeThrottled = throttled(500, shakeHandler);
+
+  // add event listeners
+
   window.addEventListener("load", () => {
     let a = produceRandomNumber(6, 1);
     let b = produceRandomNumber(6, 1);
@@ -216,22 +249,5 @@
     }
   });
 
-  window.addEventListener(
-    "devicemotion",
-    (evt) => {
-      if (evt.rotationRate.beta > 100) {
-        if (player1turn === undefined) {
-          console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
-          determineWhoRollsFirst();
-          button.textContent = "Roll";
-        } else {
-          console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
-          playerRolls(player1turn, objArray);
-          checkForWinner(player1score, player2score);
-          player1turn = !player1turn;
-        }
-      }
-    },
-    { once: true }
-  );
+  window.addEventListener("devicemotion", shakeThrottled, false);
 })();
