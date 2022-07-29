@@ -230,6 +230,7 @@
           player1turn = !player1turn;
         }
       }
+      evt.preventDefault();
     }, 250)
   );
 })();
