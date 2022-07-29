@@ -218,9 +218,9 @@
 
   window.addEventListener("devicemotion", (evt) => {
     if (
-      evt.rotationRate.alpha > 60 ||
-      evt.rotationRate.beta > 60 ||
-      evt.rotationRate.gamma > 60
+      evt.rotationRate.alpha > 200 ||
+      evt.rotationRate.beta > 200 ||
+      evt.rotationRate.gamma > 200
     ) {
       optionsOne.textContent = `${evt.rotationRate.alpha} + ${evt.rotationRate.beta} +
       ${evt.rotationRate.gamma}`;
