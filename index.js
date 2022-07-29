@@ -163,7 +163,7 @@
     };
   }
 
-  const shakeHandler = function (evt) {
+  const shakeHandler = (evt) => {
     if (evt.rotationRate.beta > 100) {
       if (player1turn === undefined) {
         console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
@@ -249,5 +249,5 @@
     }
   });
 
-  window.addEventListener("devicemotion", shakeThrottled, false);
+  window.addEventListener("devicemotion", shakeThrottled);
 })();
