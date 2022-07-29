@@ -156,7 +156,7 @@
     }
   }
 
-  // creates a handler function and a throttled function that will only run once every 200ms and a handler to go with it
+  // creates a handler function and associated throttled function that will only run once every 200ms and a handler to go with it
 
   function throttled(delay, fn) {
     let lastCall = 0;
@@ -187,17 +187,15 @@
 
   const shakeThrottled = throttled(200, shakeHandler);
 
-  // add event listeners
-
-  window.addEventListener("load", () => {
+  const loadHandler = () => {
     let a = produceRandomNumber(6, 1);
     let b = produceRandomNumber(6, 1);
     diceOne.textContent = setDisplayNumber(objArray, a);
     diceTwo.textContent = setDisplayNumber(objArray, b);
     displayButtonMessage("Click or shake to see who plays first");
-  });
+  };
 
-  button.addEventListener("click", () => {
+  const clickHandler = () => {
     console.log(`CLICK EVENT: player 1 is ${player1turn}`);
     if (player1turn === undefined) {
       console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
@@ -210,9 +208,9 @@
       player1turn = !player1turn;
     }
     evt.preventDefault();
-  });
+  };
 
-  button.addEventListener("touchend", (evt) => {
+  const touchHandler = (evt) => {
     evt.preventDefault();
     console.log(`TOUCH EVENT: player 1 is ${player1turn}`);
     if (player1turn === undefined) {
@@ -225,9 +223,9 @@
       checkForWinner(player1score, player2score);
       player1turn = !player1turn;
     }
-  });
+  };
 
-  button.addEventListener("keyup", (evt) => {
+  const keyHandler = (evt) => {
     if (evt.key === "Enter") {
       if (player1turn === undefined) {
         console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
@@ -255,7 +253,16 @@
     } else {
       alert("Please use the Enter key make selections");
     }
-  });
+  };
+  // add event listeners
+
+  window.addEventListener("load", loadHandler);
+
+  button.addEventListener("click", clickHandler);
+
+  button.addEventListener("touchend", touchHandler);
+
+  button.addEventListener("keyup", keyHandler);
 
   window.addEventListener("devicemotion", shakeThrottled);
 })();
