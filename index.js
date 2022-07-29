@@ -218,23 +218,24 @@
   window.addEventListener(
     "devicemotion",
     setInterval((evt) => {
-      if (
-        evt.acceleration.x > 20 ||
-        evt.acceleration.y > 20 ||
-        evt.acceleration.z > 20
-      ) {
-        alert(evt.acceleration.x + evt.acceleration.y + evt.acceleration.z);
-        if (player1turn === undefined) {
-          console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
-          determineWhoRollsFirst();
-          button.textContent = "Roll";
-        } else {
-          console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
-          playerRolls(player1turn, objArray);
-          checkForWinner(player1score, player2score);
-          player1turn = !player1turn;
-        }
-      }
+      // if (
+      //   evt.acceleration.x > 20 ||
+      //   evt.acceleration.y > 20 ||
+      //   evt.acceleration.z > 20
+      // ) {
+      //   alert(evt.acceleration.x + evt.acceleration.y + evt.acceleration.z);
+      //   if (player1turn === undefined) {
+      //     console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
+      //     determineWhoRollsFirst();
+      //     button.textContent = "Roll";
+      //   } else {
+      //     console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
+      //     playerRolls(player1turn, objArray);
+      //     checkForWinner(player1score, player2score);
+      //     player1turn = !player1turn;
+      //   }
+      // }
+      alert(evt.acceleration.x + evt.acceleration.y + evt.acceleration.z);
     }, 2500)
   );
 })();
