@@ -217,24 +217,21 @@
 
   window.addEventListener("devicemotion", (evt) => {
     alert("window ondevice motion");
-    if (DeviceMotionEventRotationRate) {
-      alert("determined motion is a rotation event");
-      if (
-        evt.rotationRate.alpha > 10 ||
-        evt.rotationRate.beta > 10 ||
-        evt.rotationRate.gamma > 10
-      ) {
-        alert("rotation exceeded 10");
-        if (player1turn === undefined) {
-          console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
-          determineWhoRollsFirst();
-          button.textContent = "Roll";
-        } else {
-          console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
-          playerRolls(player1turn, objArray);
-          checkForWinner(player1score, player2score);
-          player1turn = !player1turn;
-        }
+    if (
+      evt.rotationRate.alpha > 0.001 ||
+      evt.rotationRate.beta > 0.001 ||
+      evt.rotationRate.gamma > 0.001
+    ) {
+      alert("rotation exceeded 10");
+      if (player1turn === undefined) {
+        console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
+        determineWhoRollsFirst();
+        button.textContent = "Roll";
+      } else {
+        console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
+        playerRolls(player1turn, objArray);
+        checkForWinner(player1score, player2score);
+        player1turn = !player1turn;
       }
     }
   });
