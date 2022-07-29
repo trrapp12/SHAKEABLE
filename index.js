@@ -71,6 +71,14 @@
     }
   }
 
+  function addWobbleAnimation() {
+    messageContainer.classList.add("wobble");
+  }
+
+  function removeWobbleAnimation() {
+    messageContainer.classList.remove("wobble");
+  }
+
   function changeMessage(player1turn) {
     console.log("CHANGE MESSAGE");
     if (player1turn) {
@@ -119,7 +127,7 @@
 
     scoreTwoContainer.textContent = " - ";
     scoreOneContainer.textContent = " - ";
-    messageContainer.classList.remove("wobble");
+    removeWobbleAnimation();
     setTimeout(() => {
       messageContainer.textContent = "Click or shake to see who plays first";
     }, 50);
@@ -129,15 +137,15 @@
     console.log("CHECK FOR WINNER");
     if (player1score >= 20 && player2score < 20) {
       messageContainer.textContent = "Player 1 wins";
-      messageContainer.classList.add("wobble");
+      addWobbleAnimation();
       setTimeout(resetGame, 3000);
     } else if (player2score >= 20 && player1score < 20) {
       messageContainer.textContent = "Player 2 wins";
-      messageContainer.classList.add("wobble");
+      addWobbleAnimation();
       setTimeout(resetGame, 3000);
     } else if (player1score === 20 && player2score === 20) {
       messageContainer.textContent = "It's a tie!";
-      messageContainer.classList.add("wobble");
+      addWobbleAnimation();
       setTimeout(resetGame, 3000);
     } else {
       changeMessage(player1turn);

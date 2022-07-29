@@ -128,7 +128,7 @@ main {
 }
 
 .wobble {
-  animation: wobble 1000ms linear;
+  animation: wobble 500ms linear;
   animation-iteration-count: 12;
   background-color: var(--light-pink);
   color: var(--dark-blue);
