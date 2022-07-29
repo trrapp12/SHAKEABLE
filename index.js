@@ -216,8 +216,9 @@
     }
   });
 
-  window.addEventListener("devicemotion", (evt) => {
-    
+  window.addEventListener(
+    "devicemotion",
+    (evt) => {
       if (evt.rotationRate.beta > 100) {
         if (player1turn === undefined) {
           console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
@@ -229,8 +230,8 @@
           checkForWinner(player1score, player2score);
           player1turn = !player1turn;
         }
-      },
-      
-    }, {once : true}
+      }
+    },
+    { once: true }
   );
 })();
