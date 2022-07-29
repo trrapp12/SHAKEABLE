@@ -71,6 +71,10 @@
     }
   }
 
+  function displayButtonMessage(string) {
+    button.textContent = string;
+  }
+
   function addWobbleAnimation() {
     messageContainer.classList.add("wobble");
   }
@@ -171,7 +175,7 @@
       if (player1turn === undefined) {
         console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
         determineWhoRollsFirst();
-        button.textContent = "Roll";
+        displayButtonMessage("Roll!");
       } else {
         console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
         playerRolls(player1turn, objArray);
@@ -190,7 +194,7 @@
     let b = produceRandomNumber(6, 1);
     diceOne.textContent = setDisplayNumber(objArray, a);
     diceTwo.textContent = setDisplayNumber(objArray, b);
-    button.textContent = "Click or shake to see who plays first";
+    displayButtonMessage("Click or shake to see who plays first");
   });
 
   button.addEventListener("click", () => {
@@ -198,7 +202,7 @@
     if (player1turn === undefined) {
       console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
       determineWhoRollsFirst();
-      button.textContent = "Roll";
+      displayButtonMessage("Roll!");
     } else {
       console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
       playerRolls(player1turn, objArray);
@@ -214,7 +218,7 @@
     if (player1turn === undefined) {
       console.log(`TOUCH EVENT, IF STATEMENT: ${player1turn}`);
       determineWhoRollsFirst();
-      button.textContent = "Roll";
+      displayButtonMessage("Roll!");
     } else {
       console.log(`TOUCH EVENT, ELSE STATEMENT: ${player1turn}`);
       playerRolls(player1turn, objArray);
@@ -228,7 +232,7 @@
       if (player1turn === undefined) {
         console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
         determineWhoRollsFirst();
-        button.textContent = "Roll";
+        displayButtonMessage("Roll!");
       } else {
         console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
         playerRolls(player1turn, objArray);
