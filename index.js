@@ -218,9 +218,9 @@
   window.addEventListener("devicemotion", (evt) => {
     alert("window ondevice motion");
     if (
-      evt.rotationRate.alpha > 0.001 ||
-      evt.rotationRate.beta > 0.001 ||
-      evt.rotationRate.gamma > 0.001
+      evt.rotationRate.alpha > 100 ||
+      evt.rotationRate.beta > 100 ||
+      evt.rotationRate.gamma > 100
     ) {
       alert("rotation exceeded 10");
       if (player1turn === undefined) {
