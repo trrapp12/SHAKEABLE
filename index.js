@@ -220,9 +220,9 @@
     if (DeviceMotionEventRotationRate) {
       alert("determined motion is a rotation event");
       if (
-        evt.rotationRate.alpha > 10 ||
-        evt.rotationRate.beta > 10 ||
-        evt.rotationRate.gamma > 10
+        evt.rotationRate.alpha > 1 ||
+        evt.rotationRate.beta > 1 ||
+        evt.rotationRate.gamma > 1
       ) {
         alert("rotation exceeded 10");
         if (player1turn === undefined) {
