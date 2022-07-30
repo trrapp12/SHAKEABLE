@@ -20,7 +20,7 @@
 /* ============================================  NORMALIZE AND SET BASE FONT SIZE ============================================ */
 
 html {
-  font-size: 32px;
+  font-size: 16px;
 }
 
 * {
@@ -47,7 +47,7 @@ button {
 }
 
 .column {
-  margin: 0rem 0rem 1.5rem 0rem;
+  margin: 0rem 0rem 4rem 0rem;
   max-width: max-content;
 }
 
@@ -88,7 +88,7 @@ button {
 
 .master-container {
   background-color: var(--dark-blue);
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   min-height: 100vh;
 }
 
@@ -104,7 +104,7 @@ main {
   border-radius: 5px 45px 5px 45px;
   color: var(--bright-blue);
   max-width: 30vw;
-  margin: auto;
+  margin: auto auto 4rem auto;
   padding: 1rem 1.5rem;
   text-align: center;
   border: 10px solid var(--bright-blue);
@@ -113,7 +113,8 @@ main {
 
 .score {
   color: var(--bright-blue);
-  margin: 0rem 0rem 1.5rem 0rem;
+  margin: 0rem 0rem 4rem 0rem;
+  font-size: 20px;
 }
 
 .title {
@@ -134,6 +135,132 @@ main {
   background-color: var(--light-pink);
   color: var(--dark-blue);
   border: 10px solid white;
+}
+
+/* ==========================================  MEDIA QUERIES  ========================================== */
+
+@media only screen and (min-device-width: 400px) and (max-device-width: 800px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
+  button {
+    background: var(--bright-blue);
+    border: 5px solid var(--blue);
+    border-radius: 25px;
+    color: var(--dark-blue);
+    font-size: 1rem;
+    margin: auto;
+    padding: 0.75rem 1.75rem;
+  }
+
+  .column {
+    margin: 0rem 0rem 3rem 0rem;
+    max-width: max-content;
+  }
+
+  .dice-1,
+  .dice-2 {
+    background-color: var(--bright-pink);
+    border-radius: 25px;
+    border-radius: 15px;
+    box-shadow: inset 18px 18px 25px #f7a8cd, inset -18px -18px 25px #b62367;
+    color: var(--dark-blue);
+    font-family: diceyregular;
+    font-size: 2.2rem;
+    height: 2rem;
+    left: 0;
+    padding: 2rem;
+    text-align: center;
+    top: 0;
+    width: 2rem;
+    transform: translate(10px, 10px);
+  }
+
+  html {
+    font-size: 12px;
+  }
+
+  .message {
+    background-color: var(--blue);
+    border-radius: 5px 45px 5px 45px;
+    color: var(--bright-blue);
+    max-width: 30vw;
+    margin: auto;
+    padding: 1rem 3rem;
+    text-align: center;
+    border: 5px solid var(--bright-blue);
+    text-transform: uppercase;
+  }
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 400px) and (orientation: portrait) {
+  .title {
+    color: var(--light-pink);
+    font-family: "Rubik Puddles", cursive;
+    font-size: 3rem;
+    margin: 0rem auto 2rem auto;
+    text-align: center;
+  }
+
+  .message {
+    background-color: var(--blue);
+    border-radius: 5px 45px 5px 45px;
+    color: var(--bright-blue);
+    max-width: 30vw;
+    margin: auto auto 2rem auto;
+    padding: 1rem 1.5rem;
+    text-align: center;
+    border: 10px solid var(--bright-blue);
+    text-transform: uppercase;
+  }
+
+  .column {
+    margin: 0rem 0rem 3rem 0rem;
+    max-width: max-content;
+  }
+
+  .score {
+    color: var(--bright-blue);
+    margin: 0rem 0rem 2rem 0rem;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 860px) and (orientation: landscape) {
+  .master-container {
+    background-color: var(--dark-blue);
+    padding: 3rem;
+    min-height: 100vh;
+  }
+
+  .column {
+    margin: 0rem 0rem 3rem 0rem;
+    max-width: max-content;
+  }
+
+  .dice-container {
+    align-content: space-around;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: revert;
+    margin-bottom: 0px;
+  }
+
+  .score {
+    color: var(--bright-blue);
+    margin: 0rem 0rem 4rem 0rem;
+    font-size: 20px;
+  }
+
+  .message {
+    margin: auto;
+  }
+
+  main {
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: wrap;
+  }
 }
 
 /* ============================================  ANIMATIONS ============================================ */
