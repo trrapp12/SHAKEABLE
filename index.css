@@ -19,14 +19,13 @@
 
 /* ============================================  NORMALIZE AND SET BASE FONT SIZE ============================================ */
 
-html {
-  font-size: 16px;
-}
-
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-boxs;
+}
+
+html {
+  font-size: 16px;
 }
 
 /* ============================================  CLASSES ============================================ */
@@ -37,13 +36,24 @@ html {
 }
 
 button {
-  background: var(--bright-blue);
-  border: 11px solid var(--blue);
-  border-radius: 25px;
-  color: var(--dark-blue);
+  background: var(--blue);
+  border: 5px solid var(--bright-blue);
+  border-image: linear-gradient(221deg, var(--dark-blue), var(--bright-blue)) 1
+    stretch;
+  border-radius: 10px;
+  color: var(--bright-blue);
   font-size: 1rem;
   margin: auto;
   padding: 0.75rem 1.75rem;
+  transition: 200ms ease-in-out;
+  box-sizing: content-box;
+}
+
+button:hover,
+button:focus {
+  background: var(--bright-blue);
+  color: var(--blue);
+  transform: scale(1.05);
 }
 
 .column {
@@ -103,7 +113,7 @@ main {
   background-color: var(--blue);
   border-radius: 5px 45px 5px 45px;
   color: var(--bright-blue);
-  max-width: 30vw;
+  max-width: 15vw;
   margin: auto auto 4rem auto;
   padding: 1rem 1.5rem;
   text-align: center;
@@ -194,7 +204,7 @@ main {
   .title {
     color: var(--light-pink);
     font-family: "Rubik Puddles", cursive;
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0rem auto 2rem auto;
     text-align: center;
   }
@@ -260,6 +270,12 @@ main {
     flex-direction: row;
     justify-content: space-between;
     flex-flow: wrap;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .title {
+    font-size: 8rem;
   }
 }
 

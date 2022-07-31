@@ -214,7 +214,7 @@
     setTimeout(removeDiceAnimation, 3000);
     diceOne.textContent = setDisplayNumber(objArray, a);
     diceTwo.textContent = setDisplayNumber(objArray, b);
-    displayButtonMessage("Click or shake to see who plays first");
+    displayButtonMessage("Start Game");
   };
 
   const clickHandler = () => {
