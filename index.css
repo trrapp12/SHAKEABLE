@@ -22,6 +22,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 
 html {
@@ -69,7 +70,7 @@ button:focus {
   box-shadow: inset 18px 18px 25px #f7a8cd, inset -18px -18px 25px #b62367;
   color: var(--dark-blue);
   font-family: diceyregular;
-  font-size: 4rem;
+  font-size: 2.5rem;
   height: 5rem;
   left: 0;
   padding: 1rem;
@@ -100,6 +101,10 @@ button:focus {
   background-color: var(--dark-blue);
   padding: 4rem 1rem;
   min-height: 100vh;
+  border-width: calc(20vw-2rem);
+  border-color: white;
+  border-style: solid;
+  box-sizing: border-box;
 }
 
 main {
@@ -123,8 +128,20 @@ main {
 
 .score {
   color: var(--bright-blue);
-  margin: 0rem 0rem 4rem 0rem;
+  margin: 0rem;
   font-size: 20px;
+}
+
+p.score {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+span.score {
+  font-size: 3.75rem;
+  color: var(--bright-blue);
+  padding: 1.25rem;
 }
 
 .title {
@@ -136,11 +153,11 @@ main {
 }
 
 .title-container {
-  margin: 0rem 0rem 1.5rem 0rem;
+  margin: 0rem 0rem 0rem 0rem;
 }
 
 .wobble {
-  animation: wobble 500ms linear;
+  animation: wobble 500ms forwards linear;
   animation-iteration-count: 12;
   background-color: var(--light-pink);
   color: var(--dark-blue);
@@ -228,7 +245,7 @@ main {
 
   .score {
     color: var(--bright-blue);
-    margin: 0rem 0rem 2rem 0rem;
+    margin: 0rem;
     font-size: 20px;
   }
 }
@@ -256,7 +273,7 @@ main {
 
   .score {
     color: var(--bright-blue);
-    margin: 0rem 0rem 4rem 0rem;
+    margin: 0rem;
     font-size: 20px;
   }
 
