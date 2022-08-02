@@ -139,6 +139,7 @@ main {
   margin: auto;
   padding: var(--medium-margin);
   border: 10px solid white;
+  min-height: 89vh;
 }
 
 .message {
