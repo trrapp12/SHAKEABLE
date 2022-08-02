@@ -5,6 +5,12 @@
   --blue: #2173a6;
   --dark-blue: #013440;
   --bright-blue: #52e2f2;
+
+  --small-margin: 1rem;
+  --medium-margin: 2rem;
+  --large-margin: 3rem;
+  --x-large-margin: 4rem;
+  --xx-large-margin: 5rem;
 }
 
 /* ============================================  FONT FACES ============================================ */
@@ -58,7 +64,7 @@ button:focus {
 }
 
 .column {
-  margin: 0rem 0rem 4rem 0rem;
+  margin: 0rem 0rem var(--large-margin) 0rem;
   max-width: max-content;
 }
 
@@ -70,13 +76,13 @@ button:focus {
   box-shadow: inset 18px 18px 25px #f7a8cd, inset -18px -18px 25px #b62367;
   color: var(--dark-blue);
   font-family: diceyregular;
-  font-size: 2.5rem;
-  height: 5rem;
+  font-size: 4.15rem;
   left: 0;
-  padding: 1rem;
+  padding: 1.313rem;
   text-align: center;
   top: 0;
-  width: 5rem;
+  width: 7.5rem;
+  height: 7.5rem;
 }
 
 .dice-animation {
@@ -99,7 +105,7 @@ button:focus {
 
 .master-container {
   background-color: var(--dark-blue);
-  padding: 4rem 1rem;
+  padding: var(--x-large-margin);
   min-height: 100vh;
   border-width: calc(20vw-2rem);
   border-color: white;
@@ -118,17 +124,17 @@ main {
   background-color: var(--blue);
   border-radius: 5px 45px 5px 45px;
   color: var(--bright-blue);
-  max-width: 15vw;
-  margin: auto auto 4rem auto;
+  margin: auto auto var(--large-margin) auto;
   padding: 1rem 1.5rem;
   text-align: center;
   border: 10px solid var(--bright-blue);
   text-transform: uppercase;
+  max-width: 40%;
 }
 
 .score {
   color: var(--bright-blue);
-  margin: 0rem;
+  margin: 0rem auto var(--small-margin) auto;
   font-size: 20px;
 }
 
@@ -136,19 +142,20 @@ p.score {
   display: flex;
   flex-direction: column;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 span.score {
   font-size: 3.75rem;
   color: var(--bright-blue);
-  padding: 1.25rem;
 }
 
 .title {
   color: var(--light-pink);
   font-family: "Rubik Puddles", cursive;
   font-size: 4rem;
-  margin: 0rem auto 2rem auto;
+  margin: var(--large-margin) 0rem;
   text-align: center;
 }
 
