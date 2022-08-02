@@ -105,12 +105,28 @@ button:focus {
 
 .master-container {
   background-color: var(--dark-blue);
-  padding: var(--x-large-margin);
+  padding: var(--large-margin);
   min-height: 100vh;
   border-width: calc(20vw-2rem);
   border-color: white;
   border-style: solid;
   box-sizing: border-box;
+  background: linear-gradient(27deg, #062228 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #02262e 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #063f4a 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #034654 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #013742 10px, transparent 10px),
+    linear-gradient(
+      #033d4a 25%,
+      #06414e 25%,
+      #003540 50%,
+      transparent 50%,
+      transparent 75%,
+      #04272e 75%,
+      #1d5864
+    );
+  background-color: black;
+  background-size: 20px 20px;
 }
 
 main {
@@ -118,6 +134,11 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 50%;
+  margin: auto;
+  padding: var(--medium-margin);
+  border: 10px solid white;
 }
 
 .message {
@@ -173,7 +194,7 @@ span.score {
 
 /* ==========================================  MEDIA QUERIES  ========================================== */
 
-@media only screen and (min-device-width: 400px) and (max-device-width: 800px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
+@media only screen and (min-device-width: 450px) and (max-device-width: 800px) and (-webkit-min-device-pixel-ratio: 1.5) and (orientation: landscape) {
   button {
     background: var(--bright-blue);
     border: 5px solid var(--blue);
@@ -224,25 +245,47 @@ span.score {
   }
 }
 
-@media only screen and (min-device-width: 200px) and (max-device-width: 400px) and (orientation: portrait) {
+@media only screen and (max-width: 1200px) and (orientation: portrait) {
   .title {
     color: var(--light-pink);
     font-family: "Rubik Puddles", cursive;
-    font-size: 4rem;
+    font-size: 2.5rem;
     margin: 0rem auto 2rem auto;
     text-align: center;
+  }
+
+  main {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: none;
+    width: auto;
+    margin: auto;
+    padding: none;
+    border: none;
+  }
+
+  .master-container {
+    background-color: var(--dark-blue);
+    padding: var(--medium-margin);
+    min-height: 100vh;
+    border-width: calc(20vw-2rem);
+    border-color: white;
+    border-style: solid;
+    box-sizing: border-box;
   }
 
   .message {
     background-color: var(--blue);
     border-radius: 5px 45px 5px 45px;
     color: var(--bright-blue);
-    max-width: 30vw;
-    margin: auto auto 2rem auto;
+    margin: auto auto var(--large-margin) auto;
     padding: 1rem 1.5rem;
     text-align: center;
     border: 10px solid var(--bright-blue);
     text-transform: uppercase;
+    max-width: 100%;
   }
 
   .column {
@@ -299,7 +342,15 @@ span.score {
 
 @media screen and (min-width: 800px) {
   .title {
-    font-size: 8rem;
+    font-size: 3.5rem;
+  }
+
+  .dice-container {
+    align-content: space-around;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
   }
 }
 
@@ -378,3 +429,12 @@ span.score {
     transform: rotate(0deg);
   }
 }
+
+/* background: linear-gradient(27deg, #062228 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #02262e 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #0a4552 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #034452 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #023540 10px, transparent 10px),
+linear-gradient(#004858 25%, #004858 25%, #06232a 50%, transparent 50%, transparent 75%, #04272e 75%, #1d5864);
+background-color: #001014;
+background-size: 20px 20px; */
