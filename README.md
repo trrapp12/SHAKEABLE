@@ -45,8 +45,8 @@ A cute dice game.  First to 20 wins.  Uses Vanilla Javascript to track state, sc
 - [X] <em>User Story 2: </em> User should be able to see whose turn it is.
 - [X] <em>User Story 3: </em> User should be able to see updated score.
 - [X] <em>User Story 4: </em> User should be able to know who won.
-- [X] <em>User Story 4: </em> User should be able to "roll" dice either by shaking phone, pushing button, clicking button, or with keyboard button.
-- [X] <em>User Story 4: </em> User should be able to enjoy some fun animations.
+- [X] <em>User Story 5: </em> User should be able to "roll" dice either by shaking phone, pushing button, clicking button, or with keyboard button.
+- [X] <em>User Story 6: </em> User should be able to enjoy some fun animations.
 
 
 ### Project published at: 
