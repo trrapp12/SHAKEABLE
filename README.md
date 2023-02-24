@@ -33,7 +33,7 @@ https://user-images.githubusercontent.com/11747875/182308645-b06fa31c-70b4-4925-
 
 ---
 
-A cute dice game.  First to 20 wins.  Uses Vanilla Javascript to track state, scores of players, and dislay updated information.
+A cute dice game.  First to 20 wins.  Uses Vanilla Javascript to track state, scores of players, and display updated information.
 
 <br/>
 <br/>
