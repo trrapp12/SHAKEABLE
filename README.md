@@ -1,4 +1,4 @@
-# Dice Game
+# Shakeable
 
 
 ##### Contributors: Trevor Rapp
