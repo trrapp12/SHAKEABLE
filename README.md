@@ -47,12 +47,24 @@ A cute dice game.  First to 20 wins.  Uses Vanilla Javascript to track state, sc
 - [X] <em>User Story 4: </em> User should be able to know who won.
 - [X] <em>User Story 5: </em> User should be able to "roll" dice either by shaking phone, pushing button, clicking button, or with keyboard button.
 - [X] <em>User Story 6: </em> User should be able to enjoy some fun animations.
-
-
-### Project published at: 
+- 
+### MY OWN PERSONAL CONTRIBUTIONS INCLUDED
 ---
 
-[Dice Game](https://trrapp12.github.io/dice-game/)
+This project was a solo project from Scrimba, meaning that only the requirements were given.  All work was my own.
+
+<br/>
+<br/>
+
+### CREDITS: 
+---
+
+Project created by TREVOR RAPP
+
+Original project idea was part of the <a href="https://scrimba.com/learn/frontend"> Scrimba's Front End Development Course.</a>
+
+<br/>
+<br/>
 
 ### More Information:
 ---
