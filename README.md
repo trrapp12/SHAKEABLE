@@ -32,7 +32,11 @@ https://user-images.githubusercontent.com/11747875/182308645-b06fa31c-70b4-4925-
 
 > "The die has been cast."  --Julius Caesar
 
-An innovative approach to the dice game 21.  First to 20 wins.  Uses Vanilla Javascript to track state, scores of players, and display updated information.
+An innovative approach to the dice game 21.  
+
+**SHAKE YOUR PHONE TO ROLL THE DICE!!!**
+
+First to 20 wins.  Uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Accelerometer">Accelerometer API</a> to roll the dice, along with Vanilla Javascript to track state, scores of players, and display updated information.
 
 <br/>
 <br/>
@@ -50,7 +54,7 @@ An innovative approach to the dice game 21.  First to 20 wins.  Uses Vanilla Jav
 ### MY OWN PERSONAL CONTRIBUTIONS INCLUDED
 ---
 
-This project was a solo project from Scrimba, meaning that only the requirements were given.  All work was my own.
+This project was a code along project from Scrimba.  See <a href="https://scrimba.com/playlist/p6wpZHv">original</a>. 
 
 <br/>
 <br/>
