@@ -50,21 +50,95 @@ First to 20 wins.  Uses the <a href="https://developer.mozilla.org/en-US/docs/We
 - [X] <em>User Story 4: </em> User should be able to know who won.
 - [X] <em>User Story 5: </em> User should be able to "roll" dice either by shaking phone, pushing button, clicking button, or with keyboard button.
 - [X] <em>User Story 6: </em> User should be able to enjoy some fun animations.
-- 
-### MY OWN PERSONAL CONTRIBUTIONS INCLUDED
+
 ---
 
-This project was a code along project from Scrimba.  See <a href="https://scrimba.com/playlist/p6wpZHv">original</a>. 
+###  CHALLENGES I OVERCAME
+
+1) creating the acceleration was really fun, and completely new to me.  I had never used it so I had to do a lot of research to figure out how to get it to work.  One issue I found almost immediately is that the accelerometer was quite sensitive, causing the event to fire an overwhelming amount of times.  To overcome this I had to create a throttling function.  
+
+See the function below: 
+
+```javascript
+
+  function throttled(delay, fn) {
+    let lastCall = 0;
+    return function (...args) {
+      const now = new Date().getTime();
+      if (now - lastCall < delay) {
+        return;
+      }
+      lastCall = now;
+      return fn(...args);
+    };
+  }
+  
+  ```
+  
+  2) When I created key listeners I found I had to anticipate keys the user might think to hit besides the enter button to prevent them from registering.
+  
+  See code example below: 
+  
+  ```javascript
+  
+  const keyHandler = (evt) => {
+    if (evt.key === "Enter") {
+      if (player1turn === undefined) {
+        console.log(`CLICK EVENT, IF STATEMENT: ${player1turn}`);
+        determineWhoRollsFirst();
+        displayButtonMessage("Roll!");
+      } else {
+        console.log(`CLICK EVENT, ELSE STATEMENT: ${player1turn}`);
+        playerRolls(player1turn, objArray);
+        checkForWinner(player1score, player2score);
+        player1turn = !player1turn;
+      }
+    } else if (
+      evt.key === "Tab" ||
+      evt.key === "ArrowLeft" ||
+      evt.key === "Left" ||
+      evt.key === "ArrowUp" ||
+      evt.key === "Up" ||
+      evt.key === "ArrowRight" ||
+      evt.key === "Right" ||
+      evt.key === "ArrowDown" ||
+      evt.key === "Down" ||
+      evt.key === " "
+    ) {
+      console.log("nothing to see here");
+    } else {
+      alert("Please use the Enter key make selections");
+    }
+  };
+  
+  ```
+
+---
+
+### MY OWN PERSONAL CONTRIBUTIONS INCLUDED
+
+🆕 Adding the accelerometer API so that you can shake the phone to roll the dice
+
+🆕 Complete redesign of the appearance including 3 Dimensional dice, rolling animation, and cleaner/better UI.
+
+🆕 Added touch, focus, keyboard, and acceleration events.  Previously only worked with click events.
+
+🆕 Adds color! 
+
 
 <br/>
 <br/>
+
+---
 
 ### CREDITS: 
----
+
 
 Project created by TREVOR RAPP
 
-Original project idea was part of the <a href="https://scrimba.com/learn/frontend"> Scrimba's Front End Development Course.</a>
+Original project idea was a code along project from <a href="https://scrimba.com/learn/frontend"> Scrimba's Front End Development Course.</a>
+
+See <a href="https://scrimba.com/playlist/p6wpZHv">original</a>. 
 
 <br/>
 <br/>
