@@ -30,10 +30,9 @@ https://user-images.githubusercontent.com/11747875/182308645-b06fa31c-70b4-4925-
 
 ### Description:
 
+> "The die has been cast."  --Julius Caesar
 
----
-
-A cute dice game.  First to 20 wins.  Uses Vanilla Javascript to track state, scores of players, and display updated information.
+An innovative approach to the dice game 21.  First to 20 wins.  Uses Vanilla Javascript to track state, scores of players, and display updated information.
 
 <br/>
 <br/>
@@ -66,7 +65,7 @@ Original project idea was part of the <a href="https://scrimba.com/learn/fronten
 <br/>
 <br/>
 
-### More Information:
+### YOU CAN FIND ME AT:
 ---
 
 \**For more information see my [LinkedIn](https://www.linkedin.com/in/trevor-rapp-042a1037) or return to my [Github](https://github.com/trrapp12)*
