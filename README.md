@@ -41,9 +41,6 @@ An innovative approach to the dice game 21.
 
 First to 20 wins.  Uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Accelerometer">Accelerometer API</a> to roll the dice, along with Vanilla Javascript to track state, scores of players, and display updated information.
 
-<br/>
-<br/>
-
 ### Project v1.0 demonstrates the following:
 ---
 
@@ -128,10 +125,6 @@ See the function below:
 
 🆕 Adds color! 
 
-
-<br/>
-<br/>
-
 ---
 
 ### CREDITS: 
@@ -143,8 +136,6 @@ Original project idea was a code along project from <a href="https://scrimba.com
 
 See <a href="https://scrimba.com/playlist/p6wpZHv">original</a>. 
 
-<br/>
-<br/>
 
 ### YOU CAN FIND ME AT:
 ---
