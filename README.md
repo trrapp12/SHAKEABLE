@@ -12,7 +12,7 @@ https://user-images.githubusercontent.com/11747875/182308645-b06fa31c-70b4-4925-
 
 <br>
 
-https://user-images.githubusercontent.com/11747875/182308645-b06fa31c-70b4-4925-8305-22b6089fe368.mp4
+https://github.com/trrapp12/dice-game/assets/11747875/900e20d8-646e-48c1-8841-88a80f10cc33
 
 <br>
 
