@@ -10,6 +10,12 @@ https://user-images.githubusercontent.com/11747875/182308645-b06fa31c-70b4-4925-
 
 <br>
 
+<br>
+
+https://user-images.githubusercontent.com/11747875/182308645-b06fa31c-70b4-4925-8305-22b6089fe368.mp4
+
+<br>
+
 [![View Project](https://user-images.githubusercontent.com/11747875/141705232-471a0b9c-ca45-4540-a1b6-740c5e1becbe.png)](https://trrapp12.github.io/dice-game/)
 
 <br>
