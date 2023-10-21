@@ -49,6 +49,14 @@ An innovative approach to the dice game 21.
 
 ---
 
+### QUICKSTART GUIDE: 
+
+Click on the "View Project" button above ⬆️
+
+<br/>
+
+---
+
 ### Project v1.0 demonstrates the following:
 
 - [X] <em>User Story 1: </em> User should be able to play with another person.
