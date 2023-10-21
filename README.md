@@ -47,8 +47,9 @@ An innovative approach to the dice game 21.
 
 *First to 20 wins.  Uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Accelerometer">Accelerometer API</a> to roll the dice, along with Vanilla Javascript to track state, scores of players, and display updated information.*
 
-### Project v1.0 demonstrates the following:
 ---
+
+### Project v1.0 demonstrates the following:
 
 - [X] <em>User Story 1: </em> User should be able to play with another person.
 - [X] <em>User Story 2: </em> User should be able to see whose turn it is.
@@ -56,6 +57,8 @@ An innovative approach to the dice game 21.
 - [X] <em>User Story 4: </em> User should be able to know who won.
 - [X] <em>User Story 5: </em> User should be able to "roll" dice either by shaking phone, pushing button, clicking button, or with keyboard button.
 - [X] <em>User Story 6: </em> User should be able to enjoy some fun animations.
+
+<br/>
 
 ---
 
@@ -119,6 +122,9 @@ See the function below:
   
   ```
 
+<br/>
+
+
 ---
 
 ### MY OWN PERSONAL CONTRIBUTIONS INCLUDED
@@ -130,6 +136,9 @@ See the function below:
 🆕 Added touch, focus, keyboard, and acceleration events.  Previously only worked with click events.
 
 🆕 Adds color! 
+
+<br/>
+
 
 ---
 
@@ -143,8 +152,12 @@ Original project idea was a code along project from <a href="https://scrimba.com
 See <a href="https://scrimba.com/playlist/p6wpZHv">original</a>. 
 
 
-### YOU CAN FIND ME AT:
+<br/>
+
 ---
+
+### YOU CAN FIND ME AT:
+
 
 \**For more information see my [LinkedIn](https://www.linkedin.com/in/trevor-rapp-042a1037) or return to my [Github](https://github.com/trrapp12)*
 
