@@ -150,7 +150,7 @@ See the function below:
 
 ---
 
-### CREDITS: 
+### ATTRIBUTIONS: 
 
 
 Project created by TREVOR RAPP
