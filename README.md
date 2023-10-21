@@ -45,7 +45,7 @@ An innovative approach to the dice game 21.
 
 **SHAKE YOUR PHONE TO ROLL THE DICE!!!**
 
-First to 20 wins.  Uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Accelerometer">Accelerometer API</a> to roll the dice, along with Vanilla Javascript to track state, scores of players, and display updated information.
+*First to 20 wins.  Uses the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Accelerometer">Accelerometer API</a> to roll the dice, along with Vanilla Javascript to track state, scores of players, and display updated information.*
 
 ### Project v1.0 demonstrates the following:
 ---
