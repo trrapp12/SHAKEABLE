@@ -175,7 +175,15 @@
     }
   }
 
-  // creates a handler functions and associated throttled function that will only run once every 200ms and a handler to go with it
+/* 
+
+FUNCTION PURPOSE: throttled creates a callback function to be used in conjunction with the devicemotion event, 
+which without it would call the API almost non-stop
+REQUIRED INPUT/DEPENDENCIES: delay = time in ms.  fn = callback function to call with the throttler
+OUTPUT: returns the callback function
+SIDE EFFECTS: returns a callback function, but only after a set amount of time has passed
+
+*/ 
 
   function throttled(delay, fn) {
     let lastCall = 0;
@@ -216,6 +224,16 @@
     diceTwo.textContent = setDisplayNumber(objArray, b);
     displayButtonMessage("Start Game");
   };
+
+/* 
+
+FUNCTION PURPOSE: click and touch and key handlers are for game play if player wants to play 
+via mouse, touchscreen, or keyboard respectively
+REQUIRED INPUT/DEPENDENCIES: N/A
+OUTPUT: N/A
+SIDE EFFECTS: triggers game play
+
+*/ 
 
   const clickHandler = () => {
     console.log(`CLICK EVENT: player 1 is ${player1turn}`);
