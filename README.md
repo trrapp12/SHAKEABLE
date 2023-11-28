@@ -151,7 +151,7 @@ See the function below:
 
 ### SCRIMBA FRONT END DEVELOPER CAREER CERTIFICATE:
 
-*This project was completed as part of the Scrimba [The Frontend Career Path](https://scrimba.com/learn/frontend), which is composed of: 
+*This project was completed as part of the Scrimba [The Frontend Career Path](https://scrimba.com/learn/frontend), which is composed of:*
 
 * over 1000 lessons
 * 65 hours of instruction
