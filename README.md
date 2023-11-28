@@ -147,6 +147,13 @@ See the function below:
 
 <br/>
 
+---
+
+### SCRIMBA FRONT END DEVELOPER CAREER CERTIFICATE:
+
+![freeCodeCampResponsiveWebDesign.png](https://user-images.githubusercontent.com/11747875/257409023-964325b1-9779-48c7-bc0a-a9852a93d0cb.png)
+
+<br/>
 
 ---
 
