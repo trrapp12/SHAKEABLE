@@ -151,7 +151,7 @@ See the function below:
 
 ### SCRIMBA FRONT END DEVELOPER CAREER CERTIFICATE:
 
-![freeCodeCampResponsiveWebDesign.png](https://user-images.githubusercontent.com/11747875/257409023-964325b1-9779-48c7-bc0a-a9852a93d0cb.png)
+[CERTIFICATE OF COMPLETION - The Frontend Developer Career Path.pdf](https://github.com/trrapp12/dice-game/files/13483804/CERTIFICATE.OF.COMPLETION.-.The.Frontend.Developer.Career.Path.pdf)
 
 <br/>
 
