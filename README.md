@@ -16,7 +16,7 @@ https://github.com/trrapp12/dice-game/assets/11747875/900e20d8-646e-48c1-8841-88
 
 <br>
 
-[![View Project](https://user-images.githubusercontent.com/11747875/141705232-471a0b9c-ca45-4540-a1b6-740c5e1becbe.png)](https://trrapp12.github.io/dice-game/)
+[![View Project](https://user-images.githubusercontent.com/11747875/141705232-471a0b9c-ca45-4540-a1b6-740c5e1becbe.png)](https://trrapp12.github.io/SHAKEABLE/)
 
 <br>
 
@@ -51,7 +51,7 @@ An innovative approach to the dice game 21.
 
 ### QUICKSTART GUIDE: 
 
-Click on the "View Project" button above ⬆️
+Click on the "View Project" button above ⬆️ or go to <a href="https://trrapp12.github.io/SHAKEABLE/">https://trrapp12.github.io/SHAKEABLE/</a>.
 
 <br/>
 
